@@ -22,9 +22,9 @@ Step 3 - >
 That's it :) 
 
 
-if you wanna uninstall 
+if you wanna uninstall -> 
 
-- >
   
 pipx uninstall waifu-fetch
+
 
