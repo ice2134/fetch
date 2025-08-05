@@ -55,7 +55,7 @@ def get_system_info():
     RESET = "\033[0m"
 
     return [
-        f"{GREEN}User:{RESET}      {os.getlogin()}",
+        f"{GREEN}User:{RESET}      {os.environ.get("USER") or os.environ.get("USERNAME")}",
         f"{CYAN}Host:{RESET}      {socket.gethostname()}",
         f"{YELLOW}OS:{RESET}        Windows {os_version}",
         f"{YELLOW}Kernel:{RESET}    {uname.version.split()[0]}",
@@ -64,3 +64,4 @@ def get_system_info():
         f"{MAGENTA}RAM:{RESET}       {round(ram.total / (1024**3), 2)} GB",
         f"{MAGENTA}Python:{RESET}    {platform.python_version()}",
     ]
+
